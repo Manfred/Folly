@@ -4,6 +4,7 @@ require "minitest/autorun"
 require "minitest/assert_errors"
 
 $LOAD_PATH << File.expand_path('../../lib', __FILE__)
+$LOAD_PATH << File.expand_path('../../ext', __FILE__)
 
 def load_support
   root = File.expand_path('../../', __FILE__)
@@ -15,4 +16,5 @@ load_support
 require "folly"
 
 class Minitest::Test
+  include Support::IOHelpers
 end

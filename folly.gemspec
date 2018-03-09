@@ -18,10 +18,10 @@ Gem::Specification.new do |spec|
   spec.homepage = "https://erm.im/folly"
   spec.license = "MIT"
 
-  spec.files = [
+  spec.extensions << 'ext/extconf.rb'
+  spec.files = Dir.glob('{lib,ext}/**/*') + [
     'LICENSE.txt',
-    'lib/folly.rb',
-    'lib/folly/version.rb'
+    'README.md'
   ]
   spec.require_paths = ["lib"]
 
